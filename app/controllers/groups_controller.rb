@@ -7,7 +7,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    @group = @group.posts
+    @posts = @group.posts.recent
   end
 
   def edit
